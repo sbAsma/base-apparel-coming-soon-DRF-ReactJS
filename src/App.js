@@ -107,69 +107,7 @@ const useStyles = makeStyles((theme) => ({
     	borderColor: 'hsl(0, 93%, 68%) !important',
 		backgroundColor: "transparent",
 	},
-	[theme.breakpoints.down('xs')]: {
-		root: {
-			flexDirection: "column",
-			position: "relative",
-			minHeight: "800px",
-			height: "100%",
-		},
-		header: {
-			backgroundColor: "white",
-			display: "flex",
-			justifyContent: "center",
-			height: "85px",
-		},
-		logo: {
-			margin: 'auto auto auto 35px',
-			height: "25px",
-			width: "auto",
-		},
-		content: {
-			position: "absolute",
-			top: "335px",
-			height: "auto",
-			backgroundColor: "hsl(0, 100%, 98%)",
-		},
-		heroBackground: {
-			position: "absolute",
-			top: "85px",
-			height: "250px",
-			background: "url(/images/hero-mobile.jpg)",
-			backgroundSize: "cover",
-			backgroundRepeat: "no-repeat",
-		},
-		title: {
-			textAlign: "center",
-			fontSize: "10vw",
-			height: "30%",
-			marginTop: '65px',
-		},
-		descriptionBody: {
-			margin: "20px 25px 0px 25px",
-			fontSize: "4vw",
-			width:"auto",
-			textAlign: "center",
-			height: "27%",
-		},
-		emailContainer:{
-			width: "80%",
-			justifyContent: "center",
-			margin: " 45px auto 90px auto",
-			height: "55px",
-		},
-		buttonContainer: {
-			right: "-5px",
-			width: "70px",
-		},
-		button: {
-			width: "70px",
-		},
-		iconErrorContainer: {
-			right: "75px",
-		},
-	},
-	[theme.breakpoints.up('sm')]: {
+	[theme.breakpoints.up('md')]: {
 		root: {
 			flexDirection: "row",
 			height: "100%",
@@ -178,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
 			position: "absolute",
 		},
 		header: {
-			paddingTop: "65px", // fixed for all desktop screens
+			paddingTop: "65px",
 			paddingLeft: "11.5%",
 		},
 		content: {
@@ -216,6 +154,148 @@ const useStyles = makeStyles((theme) => ({
 		},
 		iconErrorContainer: {
 			right: "55px",
+		},
+	},
+	[theme.breakpoints.between('xs', 'sm')]: {
+		root: {
+			flexDirection: "column",
+			position: "relative",
+			minHeight: "1200px",
+			height: "100%",
+		},
+		header: {
+			backgroundColor: "white",
+			display: "flex",
+			justifyContent: "center",
+			height: "145px",
+		},
+		logo: {
+			margin: 'auto auto auto 55px',
+			height: "45px",
+			width: "auto",
+		},
+		content: {
+			position: "absolute",
+			top: "595px",
+			height: "auto",
+			backgroundColor: "hsl(0, 100%, 98%)",
+		},
+		heroBackground: {
+			position: "absolute",
+			top: "145px",
+			height: "450px",
+			background: "url(/images/hero-mobile.jpg)",
+			backgroundSize: "cover",
+			backgroundRepeat: "no-repeat",
+		},
+		title: {
+			textAlign: "center",
+			fontSize: "11vw",
+			height: "30%",
+			marginTop: '105px',
+		},
+		descriptionBody: {
+			margin: "30px 35px 0px 35px",
+			fontSize: "4vw",
+			width:"auto",
+			textAlign: "center",
+			height: "27%",
+		},
+		emailContainer:{
+			width: "65%",
+			justifyContent: "center",
+			margin: " 45px auto 90px auto",
+			height: "74px", 
+		},
+		notchedOutline:{ 
+			height: "74px",
+		},
+		emailInput: { 
+			"& .MuiOutlinedInput-root":{
+				borderRadius: "37px",
+			},
+			"& input": {
+				paddingLeft: "42px",
+				height: "38px",
+				fontSize: "3vw"
+			},
+			"& .MuiFormHelperText-root": {
+				paddingLeft: "27px",
+				paddingTop: "10px",
+				fontSize: "3vw"
+			}
+		},
+		buttonContainer: {
+			right: "-5px",
+			width: "95px",
+			borderRadius: "37px", 
+		},
+		button: {
+			width: "95px",
+			borderRadius: "37px", 
+		},
+		iconErrorContainer: {
+			right: "110px",
+		},
+	},
+	[theme.breakpoints.down('xs')]: {
+		root: {
+			minHeight: "800px",
+		},
+		header: {
+			backgroundColor: "white",
+			height: "85px",
+		},
+		logo: {
+			margin: 'auto auto auto 35px',
+			height: "25px",
+		},
+		content: {
+			top: "335px",
+		},
+		heroBackground: {
+			top: "85px",
+			height: "250px",
+		},
+		title: {
+			fontSize: "10vw",
+			marginTop: '65px',
+		},
+		descriptionBody: {
+			margin: "20px 25px 0px 25px",
+		},
+		emailContainer:{
+			width: "80%",
+			height: "60px",
+		},
+		notchedOutline:{ 
+			height: "60px",
+		},
+		emailInput: { 
+			"& .MuiOutlinedInput-root":{
+				borderRadius: "30px",
+			},
+			"& input": {
+				paddingLeft: "35px",
+				height: "24px",
+				fontSize: "3.5vw"
+			},
+			"& .MuiFormHelperText-root": {
+				paddingLeft: "20px",
+				paddingTop: "7px",
+				fontSize: "3.5vw"
+			}
+		},
+		buttonContainer: {
+			width: "70px",
+			borderRadius: "30px",
+		},
+		button: {
+			width: "70px",
+			borderRadius: "30px"
+		},
+		iconErrorContainer: {
+			right: "75px",
 		},
 	},
 }));
@@ -285,14 +365,14 @@ function App() {
         <div
 			className={classes.root}
 		>
-			<Grid item xs={12} sm={7} className={classes.header} >
+			<Grid item xs={12} sm={12} md={7} className={classes.header} >
 				<img 
 					src="images/logo.svg"
 					alt="base-apparel-logo"
 					className={classes.logo}
 				/>
 			</Grid>
-			<Grid item xs={12} sm={7} className={classes.content} >
+			<Grid item xs={12} sm={12} md={7} className={classes.content} >
 				<Typography
 					variant="h1"
 					className={classes.title}
@@ -357,7 +437,7 @@ function App() {
 					</div>
 				</div>
 			</Grid>
-			<Grid item xs={12} sm={5} className={classes.heroBackground} />
+			<Grid item xs={12} sm={12} md={5} className={classes.heroBackground} />
 		</div>
 		</ThemeProvider>
     );
