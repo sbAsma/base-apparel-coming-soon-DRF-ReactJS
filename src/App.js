@@ -111,7 +111,8 @@ const useStyles = makeStyles((theme) => ({
 		root: {
 			flexDirection: "column",
 			position: "relative",
-			height: "650px",
+			minHeight: "800px",
+			height: "100%",
 		},
 		header: {
 			backgroundColor: "white",
@@ -127,8 +128,8 @@ const useStyles = makeStyles((theme) => ({
 		content: {
 			position: "absolute",
 			top: "335px",
-			height: "200px",
-			marginTop: "30px",
+			height: "auto",
+			backgroundColor: "hsl(0, 100%, 98%)",
 		},
 		heroBackground: {
 			position: "absolute",
@@ -141,19 +142,21 @@ const useStyles = makeStyles((theme) => ({
 		title: {
 			textAlign: "center",
 			fontSize: "10vw",
-			height: 'auto',
-			marginTop: '30px',
+			height: "30%",
+			marginTop: '65px',
 		},
 		descriptionBody: {
-			margin: "20px 25px 20px 25px",
+			margin: "20px 25px 0px 25px",
 			fontSize: "4vw",
 			width:"auto",
 			textAlign: "center",
+			height: "27%",
 		},
 		emailContainer:{
 			width: "80%",
 			justifyContent: "center",
-			margin: " 35px auto auto auto",
+			margin: " 45px auto 90px auto",
+			height: "55px",
 		},
 		buttonContainer: {
 			right: "-5px",
