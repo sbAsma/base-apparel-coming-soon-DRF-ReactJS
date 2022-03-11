@@ -33,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 	heroBackground: {
 		width: "100%",
-		// fontFamily: font,
 	},
 	title: {
 		fontWeight: "600",
@@ -94,7 +93,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 	iconErrorContainer:{
 		position: "absolute",
-		// right: "55px",
 		height: "100%",
 		display: "flex",
 		justifyContent: "center",
@@ -187,7 +185,6 @@ const useStyles = makeStyles((theme) => ({
 			backgroundPosition: "left",
 			backgroundAttachment: "scroll",
 			minHeight: "100%",
-			// paddingTop: "17.71%", // works on height 800px but not on others
 			paddingTop: "180px",
 			paddingLeft: "11.5%",
 		},
@@ -330,7 +327,6 @@ function App() {
 								notchedOutline: (emailValidity.isEmailSubmitted &&
 									!emailValidity.isEmailValid) && classes.notchedOutline,
 							},
-							// inputMode: "numeric"
 						  }}
 					/>
 					<div className={classes.iconErrorContainer}>
