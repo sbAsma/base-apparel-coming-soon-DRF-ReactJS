@@ -48,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		flexDirection: "row",
 		position: "relative",
-		height: "55px",
 	},
 	emailInput: {
 		"& .MuiOutlinedInput-root":{
@@ -76,14 +75,14 @@ const useStyles = makeStyles((theme) => ({
 	},
 	buttonContainer:{
 		position: "absolute",
-		height: "100%",
-		borderRadius: "27px",
+		height: "56px",
+		borderRadius: "28px",
 		background: "linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%))",
 	},
 	button: {
 		position: "absolute",
-		borderRadius: "27px",
-		height: "100%",
+		borderRadius: "28px",
+		height: "56px",
 		background: "linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%))",
 		boxShadow: "-2px 15px 36px -11px rgba(0,0,0,0.30)",
 		'&:hover': {
@@ -93,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	iconErrorContainer:{
 		position: "absolute",
-		height: "100%",
+		height: "56px",
 		display: "flex",
 		justifyContent: "center",
 	},
@@ -103,6 +102,7 @@ const useStyles = makeStyles((theme) => ({
 		width: "30px",
 	},
 	notchedOutline:{
+		marginTop: '1px',
 		borderWidth: '2px',
     	borderColor: 'hsl(0, 93%, 68%) !important',
 		backgroundColor: "transparent",
@@ -205,14 +205,15 @@ const useStyles = makeStyles((theme) => ({
 			width: "65%",
 			justifyContent: "center",
 			margin: " 45px auto 90px auto",
-			height: "74px", 
 		},
 		notchedOutline:{ 
+			marginTop: '1px',
 			height: "74px",
 		},
 		emailInput: { 
 			"& .MuiOutlinedInput-root":{
 				borderRadius: "37px",
+				height: "74px",
 			},
 			"& input": {
 				paddingLeft: "42px",
@@ -223,19 +224,22 @@ const useStyles = makeStyles((theme) => ({
 				paddingLeft: "27px",
 				paddingTop: "10px",
 				fontSize: "3vw"
-			}
+			},
 		},
 		buttonContainer: {
 			right: "-5px",
 			width: "95px",
 			borderRadius: "37px", 
+			height: "74px", 
 		},
 		button: {
 			width: "95px",
 			borderRadius: "37px", 
+			height: "74px", 
 		},
 		iconErrorContainer: {
 			right: "110px",
+			height: "74px", 
 		},
 	},
 	[theme.breakpoints.down('xs')]: {
@@ -266,14 +270,15 @@ const useStyles = makeStyles((theme) => ({
 		},
 		emailContainer:{
 			width: "80%",
-			height: "60px",
 		},
 		notchedOutline:{ 
-			height: "60px",
+			marginTop: '0px',
+			height: "61px",
 		},
 		emailInput: { 
 			"& .MuiOutlinedInput-root":{
 				borderRadius: "30px",
+				height: "60px",
 			},
 			"& input": {
 				paddingLeft: "35px",
@@ -289,13 +294,16 @@ const useStyles = makeStyles((theme) => ({
 		buttonContainer: {
 			width: "70px",
 			borderRadius: "30px",
+			height: "60px",
 		},
 		button: {
 			width: "70px",
-			borderRadius: "30px"
+			borderRadius: "30px",
+			height: "60px",
 		},
 		iconErrorContainer: {
 			right: "75px",
+			height: "60px",
 		},
 	},
 }));
