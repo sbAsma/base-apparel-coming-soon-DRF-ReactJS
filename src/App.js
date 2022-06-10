@@ -324,7 +324,7 @@ function App() {
 		isEmailSubmitted: false,
 	})
 	const handleChange = (e) => {
-		const email = e.target.value
+		const email = e.target.value.toLowerCase()
 		setNewSubscription({
 			email: email,
 		})
